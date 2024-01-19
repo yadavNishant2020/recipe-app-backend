@@ -11,8 +11,11 @@ const PORT = process.env.PORT || 4000;
 const prismaClient = new PrismaClient();
 
 app.use(express.json())
-app.use(cors());
-
+app.use(cors({
+    origin: ["https://spoonful-saga-joycvru4h-yadavnishant2020.vercel.app/"],
+    methods: ["POST", "GET"],
+    credentials: true
+  }));
 
 
 app.get("/api/recipes/search", async (req, res) => {
