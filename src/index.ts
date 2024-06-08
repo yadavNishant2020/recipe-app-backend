@@ -12,7 +12,7 @@ const prismaClient = new PrismaClient();
 
 app.use(express.json())
 app.use(cors({
-    origin: ["https://spoonful-saga.vercel.app"],
+    origin: ["*"],
     methods: ["POST", "GET", "DELETE", "PUT"],
     credentials: true
   }));
